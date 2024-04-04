@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+.Mountain_Pic {
+  width: 500px;
+}
+
+</style>
+</head>
+
+<body>
+<header> Alpine four-thousanders </header>
+<article class = "Mountains">
+    Here you can see list of some alpine four-thousanders: 
+    <h1> List of mountains</h1>
+    <table>
+        <caption>Some of Alpine four-thousanders</caption>
+        <thead>
+            <tr>
+                <th scope = "col"> Mountain name</th>
+                <th scope = "col"> Height </th>
+                <th scope = "col"> Country </th>
+                <th scope = "col"> Done </th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <th scope = "row"> Mont Blanc </th>
+                <td> 4,809 </td>
+                <td> France/Italy </td>
+                <td> v </td>
+            </tr>
+            <tr>
+                <th scope = "row"> Nordend </th>
+                <td> 4,609 </td>
+                <td> Italy/Switzerland </td>
+                <td> x </td>
+            </tr>
+            <tr>
+                <th scope = "row"> Zumsteinspitze </th>
+                <td> 4,563 </td>
+                <td> Italy/Switzerland  </td>
+                <td> x </td>
+            </tr>
+            <tr>
+                <th scope = "row"> Signalkuppe </th>
+                <td>  4,554 </td>
+                <td> Italy/Switzerland  </td>
+                <td> x </td>
+            </tr>
+            <tr>
+                <th scope = "row"> Dom </th>
+                <td>  4,545  </td>
+                <td> Switzerland  </td>
+                <td> x </td>
+            </tr>
+            <tr>
+              <th scope = "row"> Lyskamm </th>
+              <td> 4,533 </td>
+              <td> Italy/Switzerland  </td>
+              <td> x </td>
+            </tr>
+            <tr>
+              <th scope = "row"> Matterhorn</th>
+              <td> 4,478 </td>
+              <td> Italy/Switzerland  </td>
+              <td> x </td>
+            </tr>
+            <tr>
+              <th scope = "row"> Alphubel </th>
+              <td> 4,206 </td>
+              <td> Switzerland  </td>
+              <td> v </td>
+            </tr>
+            <tr>
+              <th scope = "row"> Strahlhorn </th>
+              <td> 4,190 </td>
+              <td> Switzerland  </td>
+              <td> v </td>
+            </tr>
+            <tr>
+              <th scope = "row"> Bishorn </th>
+              <td> 4,153 </td>
+              <td> Switzerland  </td>
+              <td> v </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2> To <em> DO </em> list </h2>
+    <ol type = "I">
+        <li> 
+          Zumsteinspitze 
+        </li>
+        <li> 
+          <details> 
+            <summary><strong> Nordend </strong>  </summary>
+            Planned for 2024
+          </details>
+        </li>
+        <li> 
+          <details> 
+          <summary> <strong> Dom </strong></summary>
+            Planned for 2024
+          </details>
+        </li>
+    </ol>
+    
+    <img class = "Mountain_Pic"
+         src = "Dom.jpg"
+         alt = "Picture of Dom"
+         usemap="#ClimbingLink"
+         width="400" 
+         height="379"
+    >
+
+    <map name="ClimbingLink">
+      <area shape="rect" coords="0, 0, 400, 379" alt="Dom" href="https://en.wikipedia.org/wiki/Dom_(mountain)">  
+    </map>
+
+    <h3>Edit to do list</h3>
+    <form action="">
+      <label for="Mountain_Name">Planned mountain:</label>
+      <input type="text" id="Mountain_name" name="Mountain_Name"
+       pattern="[A-Za-z]{,30}" title="Mountain To plan">
+      <select>
+        <option value="To_beat"> To beat</option>
+        <option value="Done"> Done </option>
+      </select>
+      <button> Mark </button>
+    </form>
+
+    <label for="Beated_Progress"> Acomplished:</label>
+    <progress id="Beated_Progress" max = "100" value = 40></progress>
+
+</article>
+</body>
+</html>
