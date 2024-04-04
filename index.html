@@ -1,62 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
-
-caption {
-  caption-side: bottom;
-  padding: 10px;
-  font-weight: bold;
-}
-
-thead,
-tfoot {
-  background-color: rgb(228 240 245);
-}
-
-th,
-td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
-}
-
-td:last-of-type {
-  text-align: center;
-}
-
-tbody > tr:nth-of-type(even) {
-  background-color: rgb(237 238 242);
-}
-
-tfoot th {
-  text-align: right;
-}
-
-tfoot td {
-  font-weight: bold;
-}
-
-.Mountain_Pic {
-  width: 500px;
-}
-
-</style>
+  <link href="./output.css" rel="stylesheet">
 </head>
 
-<body>
+<body class = "bg-purple-200">
 <header> Alpine four-thousanders </header>
+<br>
 <article class = "Mountains">
+  <div class = mx-6>
     Here you can see list of some alpine four-thousanders: 
     <h1> List of mountains</h1>
-    <table>
-        <caption>Some of Alpine four-thousanders</caption>
+    <table class = "shadow-2xl bg-slate-400 table-auto">
+        <caption class = "text-rose-400">Some of Alpine four-thousanders</caption>
         <thead>
             <tr>
                 <th scope = "col"> Mountain name</th>
@@ -103,12 +59,6 @@ tfoot td {
               <td> x </td>
             </tr>
             <tr>
-              <th scope = "row"> Matterhorn</th>
-              <td> 4,478 </td>
-              <td> Italy/Switzerland  </td>
-              <td> x </td>
-            </tr>
-            <tr>
               <th scope = "row"> Alphubel </th>
               <td> 4,206 </td>
               <td> Switzerland  </td>
@@ -129,8 +79,8 @@ tfoot td {
         </tbody>
     </table>
 
-    <h2> To <em> DO </em> list </h2>
-    <ol type = "I">
+    <h2 class = "text-teal-700"> To <em> DO </em> list </h2>
+    <ol class = "bg-slate-400 list-roman">
         <li> 
           Zumsteinspitze 
         </li>
@@ -147,34 +97,104 @@ tfoot td {
           </details>
         </li>
     </ol>
-    
-    <img class = "Mountain_Pic"
-         src = "Dom.jpg"
-         alt = "Picture of Dom"
+    <br>
+
+    <div class = "flex">
+      <div class = "flex-auto">  
+        <img class = "Mountain_Pic"
+         src = "Nordend.jpg"
+         alt = "Picture of Nordend"
          usemap="#ClimbingLink"
-         width="400" 
-         height="379"
-    >
+         width="430" 
+         height="379">
+      </div>
+
+      <div class = "flex-auto">
+        <img class = "Mountain_Pic"
+        src = "Dom.jpg"
+        alt = "Picture of Dom"
+        usemap="#ClimbingLink"
+        width="400" 
+        height="379">
+      </div>
+      <div class = "flex-none">
+        <img class = "Mountain_Pic"
+        src = "Zumsteins.jpg"
+        alt = "Picture of Dom"
+        usemap="#ClimbingLink"
+        width="400" 
+        height="379">
+      </div>
+    </div>
 
     <map name="ClimbingLink">
       <area shape="rect" coords="0, 0, 400, 379" alt="Dom" href="https://en.wikipedia.org/wiki/Dom_(mountain)">  
     </map>
-
-    <h3>Edit to do list</h3>
+    <div>
+    <h3 class = "text-yellow-600">Edit to do list</h3>
+   
     <form action="">
-      <label for="Mountain_Name">Planned mountain:</label>
+      <label for="Mountain_Name">New planned mountain:</label>
       <input type="text" id="Mountain_name" name="Mountain_Name"
        pattern="[A-Za-z]{,30}" title="Mountain To plan">
       <select>
         <option value="To_beat"> To beat</option>
         <option value="Done"> Done </option>
       </select>
-      <button> Mark </button>
+
+        <button class="bg-indigo-500 text-white" > 
+          Mark 
+        </button>
+        <span class="relative flex-end">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+        </span>
+      </div>
     </form>
 
     <label for="Beated_Progress"> Acomplished:</label>
     <progress id="Beated_Progress" max = "100" value = 40></progress>
 
+    <br>
+    <div class="h-56 grid grid-cols-6 content-start ...">
+      <div class = "bg-slate-400">
+        <div class = "my-12 flex justify-center items-center flex-row space-x-10">
+          <div> 
+            <a href="https://alpsinsight.com/alpine-climbing-skills/">Climbing routes    </a>
+          </div>
+          <div>
+            <a href="http://www.climbshop.pl/">   Climbing gear</a>
+          </div>
+        </div>
+      </div>
+      <div> </div>
+      <div class = "bg-slate-400">
+        <div class = "my-12 flex justify-center items-center space-x-10">
+          <div> 
+            <a href="https://alpsinsight.com/alpine-climbing-skills/">Wiki </a>
+          </div>
+        </div>
+      </div>
+      <div> </div>
+      <div class = "bg-slate-400">
+        Campings in Switzerland:
+        <div class = "flex flex-col">
+          <div> <a href="https://www.campingranda.ch/eng/welcome/">Randa</a></div>
+          <div> <a href="https://www.campingschweiz.ch/">Sas-fee</a></div>
+          <div> <a href="https://www.campinglescimesmontblanc.com/en/camping-les-cimes-chamonix/">Chamonix</a> </div>
+        </div>
+      </div>
+    </div>
+
+    <svg width="300" height="200">
+      <polygon points="100,10 125,78 190,78 145,138 160,198 100,158 40,198 60,137 10,78 75,78" class = "fill-yellow-400 stroke-red-600"/>
+    </svg>
+
+  </div>
 </article>
 </body>
 </html>
+
+
+
+
